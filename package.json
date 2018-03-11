@@ -1,0 +1,19 @@
+{
+  "name": "vue-bscroll",
+  "version": "1.0.0",
+  "description": "基于better-scroll的vue滚动组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Likely6/vue-bscroll.git"
+  },
+  "author": "Likely6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Likely6/vue-bscroll/issues"
+  },
+  "homepage": "https://github.com/Likely6/vue-bscroll#readme"
+}
