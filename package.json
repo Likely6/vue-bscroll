@@ -2,9 +2,12 @@
   "name": "vue-bscroll",
   "version": "1.0.0",
   "description": "基于better-scroll的vue滚动组件",
-  "main": "index.js",
+  "main": "scroll.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "better-scroll": "^1.8.4"
   },
   "repository": {
     "type": "git",
