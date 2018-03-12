@@ -148,6 +148,12 @@ export default {
 		refresh() {
 			this.BScroll && this.BScroll.refresh()
 		},
+		scrollTo() {
+			this.BScroll && this.BScroll.scrollTo.apply(this.BScroll, arguments)
+		},
+		scrollToElement() {
+			this.BScroll && this.BScroll.scrollToElement.apply(this.BScroll, arguments)
+		},
 		finishPullDown() {
 			this.BScroll && this.BScroll.finishPullDown()
 		},
