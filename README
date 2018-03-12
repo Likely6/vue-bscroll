@@ -1,9 +1,4 @@
----
-title: vue-bscroll滚动组件(提供下拉刷新、上拉加载和其他滚动操作)
-date: 2018-03-11
-categories: VUE
-tags: VUE vue-bscroll better-scroll
----
+### vue-bscroll
 
 [vue-bscroll](https://github.com/Likely6/vue-bscroll)是基于[better-scroll](https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/#better-scroll)的vue的滚动组件，它通过props和$emit操作better-scroll的方法，将better-scroll组件化，提供下拉刷新、上拉加载等操作
 
