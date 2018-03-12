@@ -47,9 +47,9 @@ export default {
 	width: 100%;
 	height: 48px;
 	position: absolute;
-	top: -54px;
+	top: -58px;
 	left: 0;
-	padding-bottom: 6px;
+	padding-bottom: 10px;
 	box-sizing: content-box;
 	display: flex;
 	align-items: flex-end;

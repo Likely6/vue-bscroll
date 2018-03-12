@@ -70,8 +70,8 @@ export default {
 			let res = this.funcs
 			if (res.listenPullingDown) {
 				this.$set(this.defaultAttr, 'pullDownRefresh', {
-					threshold: 50,
-  					stop: 36
+					threshold: 58,
+  					stop: 50
 				})
 			}
 			if (res.listenPullingUp) {
@@ -93,11 +93,15 @@ export default {
 			if (this.func.listenScroll) {
 				this.BScroll.on('scroll', (pos) => {
 					this.$emit('scroll', pos)
-					if (pos.y > this.attrs.pullDownRefresh.threshold && !this.completeFlag && this.funcs.listenPullingDown) {
-						this.$refs.dPull.dLoosen()
+					if (this.funcs.listenPullingDown) {
+						if (pos.y > this.attrs.pullDownRefresh.threshold && !this.completeFlag) {
+							this.$refs.dPull.dLoosen()
+						}
 					}
-					if (pos.y <= this.attrs.pullDownRefresh.threshold && !this.completeFlag && this.funcs.listenPullingUp) {
-						this.$refs.dPull.dPull()
+					if (this.funcs.listenPullingUp) {
+						if (pos.y <= this.attrs.pullUpLoad.threshold && !this.completeFlag) {
+							this.$refs.dPull.dPull()
+						}
 					}
 				})
 			}
@@ -157,6 +161,7 @@ export default {
 					_this.finishPullDown()
 					setTimeout(() => {
 						_this.completeFlag = false
+						_this.refresh()
 					}, 500)
 				}, 1000)
 			})
