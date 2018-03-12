@@ -6,7 +6,6 @@
 
 	npm i vue-bscroll --save
 
-<br/>
 >props
 
 | 参数 | 说明 | 类型 | 默认值 |
@@ -39,7 +38,6 @@ Obj2: {
 }
 ```
 
-<br/>
 >methods
 
 | 名称 | 说明 | 参数 |
@@ -50,7 +48,6 @@ Obj2: {
 | afterRefresh | 在下拉刷新后调用(执行刷新操作后调用，必须) | 无 |
 | afterUpload | 在上拉加载后调用(即请求获取数据后调用，必须) | flag(true表示还有数据,false表示没有更多数据了){Boolean} |
 
-<br/>
 >events
 >注意 这些事件触发需要在props的func里配置对应的参数,下拉刷新同时需要设置listenScroll:true
 
@@ -64,7 +61,6 @@ Obj2: {
 | pullingDown | 下拉刷新时 | 无 |
 | pullingUp | 上拉加载时 | 无 |
 
-<br/>
 >例子
 
 ```html
