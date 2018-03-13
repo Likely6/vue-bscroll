@@ -84,13 +84,13 @@ export default {
 			let _this = this
 			this.BScroll = new BScroll(this.$refs.scroll, this.attrs)
 			// 滚动开始前
-			if (this.func.listenBeforeScrollStart) {
+			if (this.funcs.listenBeforeScrollStart) {
 				this.BScroll.on('beforeScrollStart', (pos) => {
 					this.$emit('beforeScrollStart', pos)
 				})
 			}
 			// 滚动时
-			if (this.func.listenScroll) {
+			if (this.funcs.listenScroll) {
 				this.BScroll.on('scroll', (pos) => {
 					this.$emit('scroll', pos)
 					if (this.funcs.listenPullingDown) {
@@ -106,13 +106,13 @@ export default {
 				})
 			}
 			// 滚动结束
-			if (this.func.listenScrollEnd) {
+			if (this.funcs.listenScrollEnd) {
 				this.BScroll.on('scrollEnd', (pos) => {
 					this.$emit('scrollEnd', pos)
 				})
 			}
 			// 滚动到底部
-			if (this.func.listenScrollToEnd) {
+			if (this.funcs.listenScrollToEnd) {
 				this.BScroll.on('scrollEnd', (pos) => {
 					if (pos.y <= this.BScroll.maxScrollY + 50) {
 						this.$emit('scrollToEnd', pos)
@@ -120,13 +120,13 @@ export default {
 				})
 			}
 			// 鼠标、手指离开
-			if (this.func.listenTouchEnd) {
+			if (this.funcs.listenTouchEnd) {
 				this.BScroll.on('touchEnd', (pos) => {
 					this.$emit('touchEnd', pos)
 				})
 			}
 			// 监听下拉刷新
-			if (this.func.listenPullingDown) {
+			if (this.funcs.listenPullingDown) {
 				this.BScroll.on('pullingDown', () => {
 					// 触发刷新
 					_this.$refs.dPull.dHideText()
@@ -136,7 +136,7 @@ export default {
 				})
 			}
 			// 监听上拉刷新
-			if (this.func.listenPullingUp) {
+			if (this.funcs.listenPullingUp) {
 				// 监听上拉加载
 				this.BScroll.on('pullingUp', () => {
 					_this.$refs.uPull.uShow()
@@ -154,10 +154,10 @@ export default {
 		scrollToElement() {
 			this.BScroll && this.BScroll.scrollToElement.apply(this.BScroll, arguments)
 		},
-		finishPullDown() {
+		_finishPullDown() {
 			this.BScroll && this.BScroll.finishPullDown()
 		},
-		finishPullUp() {
+		_finishPullUp() {
 			this.BScroll && this.BScroll.finishPullUp()
 		},
 		afterRefresh() {
